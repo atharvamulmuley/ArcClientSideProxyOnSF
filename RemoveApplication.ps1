@@ -1,0 +1,4 @@
+Connect-ServiceFabricCluster
+Remove-ServiceFabricApplicationPackage -ApplicationPackagePathInImageStore MyApplication
+Remove-ServiceFabricApplication -ApplicationName fabric:/GuestProxyAPI 
+Unregister-ServiceFabricApplicationType -ApplicationTypeName GuestProxyAPIType -ApplicationTypeVersion 1.0.0
