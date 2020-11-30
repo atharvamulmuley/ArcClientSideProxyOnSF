@@ -22,7 +22,9 @@
     <EntryPoint>
       <ExeHost>
         <Program>arcK8sProxy.exe</Program>
+        <!--<Arguments>-v</Arguments>-->
         <WorkingFolder>CodeBase</WorkingFolder>
+        <ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048"/>
       </ExeHost>
     </EntryPoint>
   </CodePackage>
