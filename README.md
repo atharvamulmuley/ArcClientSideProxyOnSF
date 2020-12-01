@@ -5,7 +5,7 @@
 `git clone https://github.com/atharvamulmuley/ArcClientSideProxyOnSF.git`
 - Open GuestProxyAPI.sln in Visual Studio
 - Hit Ctrl+F5 in Visual Studio to run the solution.
-- Go to <repo-root>/GuestProxyAPI/pkg/Debug/GuestProxyAPIServicePkg and make the following changes to the ServiceManifest.xml file
+- Go to \<repo-root\>/GuestProxyAPI/pkg/Debug/GuestProxyAPIServicePkg and make the following changes to the ServiceManifest.xml file
   - Add the following code package below the existing code package in the file
   ```
   <CodePackage Name="Code2" Version="1.0.0">
