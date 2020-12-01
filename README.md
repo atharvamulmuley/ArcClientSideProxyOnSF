@@ -17,29 +17,33 @@
 - Open Postman and make a request with the following details:
   - URL: http://localhost:8836/subscriptions/<subid\>/resourceGroups/\<rg-name\>/providers/Microsoft.Kubernetes/connectedClusters/\<cluster-name\>/register
   - Body: 
-    `{
-    "kubeconfigs": [
-      {
-        "name": "credentialName1",
-        "value": "credentialValue1"
-      }
-    ],
-    "hybridConnectionConfig": {
-        "relay": "relayNameSpace",
-        "hybridConnectionName": "hybridConnection",
-        "token": "relay sas token",
-        "expiry": ExpirationTime
-    }
-}`
-  - You should see a response of 200 OK with this body:
-    `{
-  "kubeconfigs": [
+    ```
     {
-      "name": "credentialName1",
-      "value": "credentialValue1"
+        "kubeconfigs": [
+          {
+            "name": "credentialName1",
+            "value": "credentialValue1"
+          }
+        ],
+        "hybridConnectionConfig": {
+            "relay": "relayNameSpace",
+            "hybridConnectionName": "hybridConnection",
+            "token": "relay sas token",
+            "expiry": ExpirationTime
+        }
     }
-  ]
-}`
+    ```
+  - You should see a response of 200 OK with this body:
+    ```
+    {
+      "kubeconfigs": [
+        {
+          "name": "credentialName1",
+          "value": "credentialValue1"
+        }
+      ]
+    }
+    ```
 
 
 
