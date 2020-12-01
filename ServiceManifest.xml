@@ -24,7 +24,7 @@
         <Program>arcK8sProxy.exe</Program>
         <!--<Arguments>-v</Arguments>-->
         <!--arguments to guest proxy executable should be specified like above-->
-        <!--<Arguments>-c "./config.yml"</Arguments>-->
+        <Arguments>-c "./config.yml"</Arguments>
         <!--path to config file should be specified like above. '.' above refers to the working directory defined by Codebase-->
         <WorkingFolder>CodeBase</WorkingFolder>
         <!--Working directory for the codepackage with the CodeBase option will be <repo root>\GuestProxyAPI\pkg\Debug\GuestProxyAPIServicePkg\Code2-->
