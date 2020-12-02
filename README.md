@@ -1,5 +1,8 @@
 # ArcClientSideProxyOnSF
 
+### Description
+This project has an ASP.NET Controller that listens on port 8836, forwards the requests to client side proxy and returns the response from it. It allows client side proxy to run on local host without exposing it as a service. 
+
 ### Steps to run Client side proxy
 - Clone this repo with: 
 `git clone https://github.com/atharvamulmuley/ArcClientSideProxyOnSF.git`
