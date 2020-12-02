@@ -34,8 +34,8 @@
 - Run DeployApplication script:
 `.\DeployApplication.ps1` This step will deploy the application to sf cluster.
 - Open Postman and make a request with the following details:
-  - If you are using a local sf cluster then URL: `http://localhost:8836/subscriptions/<subid\>/resourceGroups/\<rg-name\>/providers/Microsoft.Kubernetes/connectedClusters/\<cluster-name\>/register`
-  - If you are using a remote sf cluster then URL: `http://<sf-cluster-endpoint>:8836/subscriptions/<subid\>/resourceGroups/\<rg-name\>/providers/Microsoft.Kubernetes/connectedClusters/\<cluster-name\>/register` Make sure port 8836 is whitelisted in the nsg for this step. 
+  - If you are using a local sf cluster then URL: `http://localhost:8836/subscriptions/<subid>/resourceGroups/<rg-name>/providers/Microsoft.Kubernetes/connectedClusters/<cluster-name>/register`
+  - If you are using a remote sf cluster then URL: `http://<sf-cluster-endpoint>:8836/subscriptions/<subid>/resourceGroups/<rg-name>/providers/Microsoft.Kubernetes/connectedClusters/<cluster-name>/register` Make sure port 8836 is whitelisted in the nsg for this step. 
   - Body: 
     ```
     {
