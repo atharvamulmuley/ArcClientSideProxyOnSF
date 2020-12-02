@@ -4,7 +4,7 @@
 - Clone this repo with: 
 `git clone https://github.com/atharvamulmuley/ArcClientSideProxyOnSF.git`
 - Open GuestProxyAPI.sln in Visual Studio
-- Hit Ctrl+F5 in Visual Studio to run the solution.
+- Right click on solution and select **Package**. This will create a package for the application.
 - Go to \<repo-root\>/GuestProxyAPI/pkg/Debug/GuestProxyAPIServicePkg and make the following changes to the ServiceManifest.xml file
   - Add the following code package below the existing code package in the file
   ```
@@ -27,14 +27,15 @@
 - Navigate to the root of the cloned repository in terminal
 - Navigate to Auxillary folder:
 `cd Auxillary`
-- Run RemoveApplication script:
-`.\RemoveApplication.ps1`
+- If you have an existing deployment of the application on the sf cluster run RemoveApplication script:
+`.\RemoveApplication.ps1` You can skip this step otherwise.
 - Run Helper script:
-`.\Helper.ps1`
+`.\Helper.ps1` This step will copy the guestProxy executable and config to second codepackage's directory.
 - Run DeployApplication script:
-`.\DeployApplication.ps1`
+`.\DeployApplication.ps1` This step will deploy the application to sf cluster.
 - Open Postman and make a request with the following details:
-  - URL: http://localhost:8836/subscriptions/<subid\>/resourceGroups/\<rg-name\>/providers/Microsoft.Kubernetes/connectedClusters/\<cluster-name\>/register
+  - If you are using a local sf cluster then URL: `http://localhost:8836/subscriptions/<subid\>/resourceGroups/\<rg-name\>/providers/Microsoft.Kubernetes/connectedClusters/\<cluster-name\>/register`
+  - If you are using a remote sf cluster then URL: `http://<sf-cluster-endpoint>:8836/subscriptions/<subid\>/resourceGroups/\<rg-name\>/providers/Microsoft.Kubernetes/connectedClusters/\<cluster-name\>/register` Make sure port 8836 is whitelisted in the nsg for this step. 
   - Body: 
     ```
     {
